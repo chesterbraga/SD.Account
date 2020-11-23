@@ -32,7 +32,7 @@ namespace SD.Transfer.Api.Controllers.V1
         }
 
         /// <summary>
-        /// Cadastrar Conta
+        /// Cadastra Conta
         /// </summary>
         /// <param name="contaViewModel">Conta</param>        
         [HttpPost]
@@ -50,10 +50,10 @@ namespace SD.Transfer.Api.Controllers.V1
         }
 
         /// <summary>
-        /// Consultar Conta
+        /// Consulta Conta
         /// </summary>
         /// <param name="contaId">Id da Conta</param>
-        [HttpGet("{customerId:int}")]
+        [HttpGet("contaId")]
         public async Task<ActionResult<ContaViewModel>> GetConta(string contaId)
         {
             var conta = _mapper.Map<ContaViewModel>(await _contaService.GetConta(contaId));
@@ -67,7 +67,7 @@ namespace SD.Transfer.Api.Controllers.V1
         }
 
         /// <summary>
-        /// Listar Contas
+        /// Lista Contas
         /// </summary>        
         [HttpGet]
         public async Task<IEnumerable<ContaViewModel>> GetContas()

@@ -31,7 +31,7 @@ namespace SD.Transfer.Api.Controllers.V1
         }
 
         /// <summary>
-        /// Transferir valores entre contas
+        /// Transferência entre contas
         /// </summary>
         /// <param name="lancamentoViewModel">Lancamento</param>
         [HttpPost]
